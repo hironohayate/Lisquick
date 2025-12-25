@@ -8,8 +8,10 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 
 export default function HomeScreen() {
+  const router = useRouter();
   const remainingQuestions = 3; // ダミーデータ
 
   return (
@@ -41,6 +43,7 @@ export default function HomeScreen() {
           <TouchableOpacity
             style={styles.primaryButton}
             activeOpacity={0.85}
+            onPress={() => router.push('/problem-setup')}
           >
             <Text style={styles.primaryButtonText}>問題を始める</Text>
           </TouchableOpacity>
