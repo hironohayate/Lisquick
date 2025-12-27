@@ -24,7 +24,10 @@ export default function HomeScreen() {
         {/* メインカード */}
         <View style={styles.mainCard}>
           {/* 設定ボタン（カード内右上） */}
-          <Pressable style={styles.settingsButton}>
+          <Pressable
+            style={styles.settingsButton}
+            onPress={() => router.push('/settings')}
+          >
             <Ionicons name="settings" size={24} color="#666" />
           </Pressable>
 
@@ -52,6 +55,7 @@ export default function HomeScreen() {
           <TouchableOpacity
             style={styles.secondaryButton}
             activeOpacity={0.85}
+            onPress={() => router.push('/results')}
           >
             <Text style={styles.secondaryButtonText}>成績を見る</Text>
           </TouchableOpacity>
@@ -68,7 +72,11 @@ export default function HomeScreen() {
             <Text style={styles.premiumDescription}>
               プレミアムプランで1日10問まで挑戦できます
             </Text>
-            <TouchableOpacity style={styles.premiumButton} activeOpacity={0.85}>
+            <TouchableOpacity
+              style={styles.premiumButton}
+              activeOpacity={0.85}
+              onPress={() => router.push('/premium')}
+            >
               <Text style={styles.premiumButtonText}>詳しく見る</Text>
             </TouchableOpacity>
           </View>

@@ -15,8 +15,8 @@ export default function ProblemSetupScreen() {
 
   const handleStart = () => {
     if (isStartEnabled) {
-      // TODO: Navigate to quiz screen
-      console.log('Starting quiz with:', { difficulty: selectedDifficulty, topic: selectedTopic });
+      // Navigate to quiz screen (replace to prevent going back)
+      router.replace('/quiz');
     }
   };
 
